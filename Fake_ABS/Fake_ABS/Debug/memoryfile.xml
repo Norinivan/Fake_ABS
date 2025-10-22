@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project>                                  
+  <executable name="Fake_ABS.elf">                 
+    <memory name="program">              
+      <units>bytes</units>                 
+      <length>1024</length>                 
+      <used>328</used>                     
+      <free>696</free>                     
+    </memory>                              
+    <memory name="data">                 
+      <units>bytes</units>                 
+      <length>64</length>                 
+      <used>16</used>                     
+      <free>48</free>                     
+    </memory>                              
+  </executable>                            
+</project>                                 
