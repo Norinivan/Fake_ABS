@@ -8,15 +8,34 @@
 #define F_CPU 1200000UL
 #include <xc.h>
 #include <util/delay.h>
+#include <avr/interrupt.h>
 #define OUTPIN	0
 #define BTNPIN	1
 #define FUSEPIN	4
+unsigned char status_blink = 0;
 
 void blink(void);
+
+ISR(PCINT0_vect)
+{
+	if (!(PORTB & (1<<BTNPIN)))
+	{
+		status_blink = 1;
+	}
+	else
+	{
+		status_blink = 0;
+		PORTB&=~(1<<OUTPIN);
+	}
+	
+}
 
 int main(void)
 {
 	DDRB|=(1<<OUTPIN);
+	PCMSK |= (1 << BTNPIN) | (1 << FUSEPIN);
+	GIMSK |= (1 << PCIE);
+	sei();
 	
 	//-----------Start Blink-----------
 	_delay_ms(500);
@@ -27,8 +46,16 @@ int main(void)
 	
     while(1)
     {
-        blink();
-		_delay_ms(10000);
+        if (status_blink == 1)
+        {
+			while(!(PORTB & (1<<BTNPIN)))
+			{
+				PORTB|=(1<<OUTPIN);
+			}
+			PORTB&=~(1<<OUTPIN);
+			status_blink = 0;
+			//blink();
+        }
     }
 }
 
@@ -41,7 +68,16 @@ for(unsigned char i=0; i<8; i++)
 	for (unsigned int j=arr[i]; j>0; j--)
 	{
 		_delay_ms(1);
+		if (status_blink == 1)
+		{
+			break;
+		}
 	}
 	PORTB^=(1<<OUTPIN);
+	if (status_blink == 1)
+	{
+		status_blink = 0;
+		break;
+	}
 }
 }
