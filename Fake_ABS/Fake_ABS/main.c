@@ -12,6 +12,7 @@
 #define OUTPIN	0
 #define BTNPIN	1
 #define FUSEPIN	4
+#define TESTPIN 3
 unsigned char status_blink = 0;
 
 void blink(void);
@@ -21,18 +22,20 @@ ISR(PCINT0_vect)
 	if (!(PORTB & (1<<BTNPIN)))
 	{
 		status_blink = 1;
+		PORTB|=(1<<TESTPIN);
 	}
 	else
 	{
 		status_blink = 0;
 		PORTB&=~(1<<OUTPIN);
+		PORTB&=~(1<<TESTPIN);
 	}
 	
 }
 
 int main(void)
 {
-	DDRB|=(1<<OUTPIN);
+	DDRB|=(1<<OUTPIN)|(1<<TESTPIN);
 	PCMSK |= (1 << BTNPIN) | (1 << FUSEPIN);
 	GIMSK |= (1 << PCIE);
 	sei();
@@ -77,6 +80,7 @@ for(unsigned char i=0; i<8; i++)
 	if (status_blink == 1)
 	{
 		status_blink = 0;
+		PORTB&=~(1<<OUTPIN);
 		break;
 	}
 }

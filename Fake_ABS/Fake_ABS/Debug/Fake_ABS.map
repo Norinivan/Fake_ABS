@@ -17,7 +17,7 @@ Discarded input sections
  .data          0x0000000000000000        0x0 main.o
  .bss           0x0000000000000000        0x0 main.o
  .rodata        0x0000000000000000       0x10 main.o
- .text.blink    0x0000000000000000       0x82 main.o
+ .text.blink    0x0000000000000000       0x88 main.o
  .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_copy_data.o)
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_copy_data.o)
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr25/tiny-stack/memx-const\libgcc.a(_copy_data.o)
@@ -379,10 +379,10 @@ END GROUP
  .debug_abbrev  0x0000000000000000      0x2b6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.10.348/xc8/avr/lib/avr25/tiny-stack/memx-const/crtattiny13a.o
  .debug_abbrev  0x00000000000002b6      0x144 main.o
 
-.debug_line     0x0000000000000000      0x29f
+.debug_line     0x0000000000000000      0x2b2
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000       0xcd C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.10.348/xc8/avr/lib/avr25/tiny-stack/memx-const/crtattiny13a.o
- .debug_line    0x00000000000000cd      0x1d2 main.o
+ .debug_line    0x00000000000000cd      0x1e5 main.o
 
 .debug_frame    0x0000000000000000       0x64
  *(.debug_frame)
@@ -441,45 +441,45 @@ LOAD data_init
                 0x0000000000000066                main
 
 .text.__vector_2
-                0x00000000000000ca       0x2e
+                0x00000000000000ca       0x3a
  .text.__vector_2
-                0x00000000000000ca       0x2e main.o
+                0x00000000000000ca       0x3a main.o
                 0x00000000000000ca                __vector_2
 
-.text.exit      0x00000000000000f8        0xe
- .text.exit     0x00000000000000f8        0xe c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/tiny-stack/memx-const\libc.a(exit.o)
-                0x00000000000000f8                exit
+.text.exit      0x0000000000000104        0xe
+ .text.exit     0x0000000000000104        0xe c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/tiny-stack/memx-const\libc.a(exit.o)
+                0x0000000000000104                exit
 
-.text           0x0000000000000106        0x2
- .text          0x0000000000000106        0x2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.10.348/xc8/avr/lib/avr25/tiny-stack/memx-const/crtattiny13a.o
-                0x0000000000000106                __vector_1
-                0x0000000000000106                __bad_interrupt
-                0x0000000000000106                __vector_6
-                0x0000000000000106                __vector_3
-                0x0000000000000106                __vector_7
-                0x0000000000000106                __vector_5
-                0x0000000000000106                __vector_4
-                0x0000000000000106                __vector_9
-                0x0000000000000106                __vector_8
+.text           0x0000000000000112        0x2
+ .text          0x0000000000000112        0x2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.10.348/xc8/avr/lib/avr25/tiny-stack/memx-const/crtattiny13a.o
+                0x0000000000000112                __vector_1
+                0x0000000000000112                __bad_interrupt
+                0x0000000000000112                __vector_6
+                0x0000000000000112                __vector_3
+                0x0000000000000112                __vector_7
+                0x0000000000000112                __vector_5
+                0x0000000000000112                __vector_4
+                0x0000000000000112                __vector_9
+                0x0000000000000112                __vector_8
 
 .text.__dummy_fini
-                0x0000000000000108        0x2
+                0x0000000000000114        0x2
  .text.__dummy_fini
-                0x0000000000000108        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/tiny-stack/memx-const\libc.a(exit.o)
-                0x0000000000000108                _fini
+                0x0000000000000114        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/tiny-stack/memx-const\libc.a(exit.o)
+                0x0000000000000114                _fini
 
 .text.__dummy_funcs_on_exit
-                0x000000000000010a        0x2
+                0x0000000000000116        0x2
  .text.__dummy_funcs_on_exit
-                0x000000000000010a        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/tiny-stack/memx-const\libc.a(exit.o)
-                0x000000000000010a                __funcs_on_exit
+                0x0000000000000116        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/tiny-stack/memx-const\libc.a(exit.o)
+                0x0000000000000116                __funcs_on_exit
 
 .text.__dummy_simulator_exit
-                0x000000000000010c        0x2
+                0x0000000000000118        0x2
  .text.__dummy_simulator_exit
-                0x000000000000010c        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/tiny-stack/memx-const\libc.a(exit.o)
-                0x000000000000010c                __simulator_exit
+                0x0000000000000118        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/tiny-stack/memx-const\libc.a(exit.o)
+                0x0000000000000118                __simulator_exit
 
-.text._Exit     0x000000000000010e        0x2
- .text._Exit    0x000000000000010e        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/tiny-stack/memx-const\libc.a(_Exit.o)
-                0x000000000000010e                _Exit
+.text._Exit     0x000000000000011a        0x2
+ .text._Exit    0x000000000000011a        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr25/tiny-stack/memx-const\libc.a(_Exit.o)
+                0x000000000000011a                _Exit
