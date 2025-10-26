@@ -1,0 +1,27 @@
+# Установить автоопределение для текстовых файлов
+* text=auto
+
+# Makefile должны использовать LF
+Makefile text eol=lf
+*.mk text eol=lf
+
+# Исходные файлы C/C++
+*.c text
+*.h text
+*.cpp text
+*.hpp text
+
+# Файлы проектов Microchip Studio
+*.cproj text
+*.sln text
+
+# Бинарные файлы компилятора
+*.bin binary
+*.hex binary
+*.eep binary
+*.obj binary
+*.elf binary
+
+# Файлы отладки
+*.map text
+*.lss text
