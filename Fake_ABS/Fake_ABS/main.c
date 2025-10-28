@@ -23,16 +23,16 @@ ISR(PCINT0_vect)
 {
 	if (!(PINB & (1<<BTNPIN)))	//Если нажата кнопка диагностики
 	{
-		status_blink = 1;		//Выставляю флад диагностики
+		status_blink = 1;		//Выставляю флаг диагностики
 		counter = 0;			//Сбрасываю счётчик времени
 		PORTB|=(1<<TESTPIN)|(1<<OUTPIN);	//Зажигаю светодиод на панели
 		while(!(PINB & (1<<BTNPIN)));		//Жду, пока нажата кнопка
 		PORTB&=~((1<<OUTPIN)|(1<<TESTPIN));	//Выключаю светодиод
 	}
-	if (!(PINB & (1<<FUSEPIN)))				//Если предохранитель выдернули
+	if ((PINB & (1<<FUSEPIN)))				//Если предохранитель выдернули
 	{
 		PORTB|=(1<<TESTPIN)|(1<<OUTPIN);	//Зажигаю светодиод
-		while (!(PINB & (1<<FUSEPIN)));		//жду, пока не вставят предохранитель
+		while ((PINB & (1<<FUSEPIN)));		//жду, пока не вставят предохранитель
 		PORTB&=~((1<<OUTPIN)|(1<<TESTPIN));	//Выключаю светодиод
 		restart = 1;						//Поднимаю флаг перезагрузки
 	}
@@ -44,14 +44,15 @@ int main(void)
 	{
 		
 	DDRB|=(1<<OUTPIN)|(1<<TESTPIN);
+	PORTB |=(1<<FUSEPIN);
 	PCMSK |= (1 << BTNPIN) | (1 << FUSEPIN);
 	GIMSK |= (1 << PCIE);
 	sei();
 	
-	if (!(PINB & (1<<FUSEPIN)))	
+	if ((PINB & (1<<FUSEPIN)))	
 	{
 		PORTB|=(1<<TESTPIN)|(1<<OUTPIN);	//Зажигаю светодиод
-		while (!(PINB & (1<<FUSEPIN)));		//жду, пока не вставят предохранитель
+		while ((PINB & (1<<FUSEPIN)));		//жду, пока не вставят предохранитель
 		PORTB&=~((1<<OUTPIN)|(1<<TESTPIN));
 	}
 	start_blink();

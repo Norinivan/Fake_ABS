@@ -5,68 +5,68 @@ Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
   0 .text         00000066  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000000  00800060  00800060  0000026e  2**0
+  1 .data         00000000  00800060  00800060  00000274  2**0
                   ALLOC, LOAD, DATA
-  2 .comment      0000002f  00000000  00000000  0000026e  2**0
+  2 .comment      0000002f  00000000  00000000  00000274  2**0
                   CONTENTS, READONLY
-  3 .stack.descriptors.hdr 0000000e  00000000  00000000  0000029d  2**0
+  3 .stack.descriptors.hdr 0000000e  00000000  00000000  000002a3  2**0
                   CONTENTS, READONLY
-  4 .debug_aranges 00000030  00000000  00000000  000002ab  2**0
+  4 .debug_aranges 00000030  00000000  00000000  000002b1  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   000006fa  00000000  00000000  000002db  2**0
+  5 .debug_info   000006fa  00000000  00000000  000002e1  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 000003d5  00000000  00000000  000009d5  2**0
+  6 .debug_abbrev 000003d5  00000000  00000000  000009db  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   00000302  00000000  00000000  00000daa  2**0
+  7 .debug_line   00000308  00000000  00000000  00000db0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000054  00000000  00000000  000010ac  2**2
+  8 .debug_frame  00000054  00000000  00000000  000010b8  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    00000100  00000000  00000000  00001100  2**0
+  9 .debug_str    00000100  00000000  00000000  0000110c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    00000112  00000000  00000000  00001200  2**0
+ 10 .debug_loc    00000112  00000000  00000000  0000120c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000020  00000000  00000000  00001312  2**0
+ 11 .debug_ranges 00000020  00000000  00000000  0000131e  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .text         00000002  000001d0  000001d0  00000264  2**1
+ 12 .text         00000002  000001d6  000001d6  0000026a  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00001334  2**2
+ 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00001340  2**2
                   CONTENTS, READONLY, DEBUGGING
- 14 .text.__vector_2 00000054  0000013c  0000013c  000001d0  2**1
+ 14 .text.__vector_2 00000054  00000142  00000142  000001d6  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 15 .text.start_blink 00000032  00000190  00000190  00000224  2**1
+ 15 .text.start_blink 00000032  00000196  00000196  0000022a  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 16 .text.main    000000d6  00000066  00000066  000000fa  2**1
+ 16 .text.main    000000dc  00000066  00000066  000000fa  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 17 .bss.restart  00000001  00800062  00800062  0000026e  2**0
+ 17 .bss.restart  00000001  00800062  00800062  00000274  2**0
                   ALLOC
- 18 .bss.counter  00000002  00800060  00800060  0000026e  2**0
+ 18 .bss.counter  00000002  00800060  00800060  00000274  2**0
                   ALLOC
- 19 .bss.status_blink 00000001  00800063  00800063  0000026e  2**0
+ 19 .bss.status_blink 00000001  00800063  00800063  00000274  2**0
                   ALLOC
- 20 .text.__dummy_fini 00000002  000001d2  000001d2  00000266  2**1
+ 20 .text.__dummy_fini 00000002  000001d8  000001d8  0000026c  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 21 .text.__dummy_funcs_on_exit 00000002  000001d4  000001d4  00000268  2**1
+ 21 .text.__dummy_funcs_on_exit 00000002  000001da  000001da  0000026e  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 22 .text.__dummy_simulator_exit 00000002  000001d6  000001d6  0000026a  2**1
+ 22 .text.__dummy_simulator_exit 00000002  000001dc  000001dc  00000270  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 23 .text.exit    0000000e  000001c2  000001c2  00000256  2**1
+ 23 .text.exit    0000000e  000001c8  000001c8  0000025c  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 24 .text._Exit   00000002  000001d8  000001d8  0000026c  2**1
+ 24 .text._Exit   00000002  000001de  000001de  00000272  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
    0:	0c c0       	rjmp	.+24     	; 0x1a <__ctors_end>
-   2:	e6 c0       	rjmp	.+460    	; 0x1d0 <__bad_interrupt>
-   4:	9b c0       	rjmp	.+310    	; 0x13c <__vector_2>
-   6:	e4 c0       	rjmp	.+456    	; 0x1d0 <__bad_interrupt>
-   8:	e3 c0       	rjmp	.+454    	; 0x1d0 <__bad_interrupt>
-   a:	e2 c0       	rjmp	.+452    	; 0x1d0 <__bad_interrupt>
-   c:	e1 c0       	rjmp	.+450    	; 0x1d0 <__bad_interrupt>
-   e:	e0 c0       	rjmp	.+448    	; 0x1d0 <__bad_interrupt>
-  10:	df c0       	rjmp	.+446    	; 0x1d0 <__bad_interrupt>
-  12:	de c0       	rjmp	.+444    	; 0x1d0 <__bad_interrupt>
+   2:	e9 c0       	rjmp	.+466    	; 0x1d6 <__bad_interrupt>
+   4:	9e c0       	rjmp	.+316    	; 0x142 <__vector_2>
+   6:	e7 c0       	rjmp	.+462    	; 0x1d6 <__bad_interrupt>
+   8:	e6 c0       	rjmp	.+460    	; 0x1d6 <__bad_interrupt>
+   a:	e5 c0       	rjmp	.+458    	; 0x1d6 <__bad_interrupt>
+   c:	e4 c0       	rjmp	.+456    	; 0x1d6 <__bad_interrupt>
+   e:	e3 c0       	rjmp	.+454    	; 0x1d6 <__bad_interrupt>
+  10:	e2 c0       	rjmp	.+452    	; 0x1d6 <__bad_interrupt>
+  12:	e1 c0       	rjmp	.+450    	; 0x1d6 <__bad_interrupt>
 
 00000014 <.dinit>:
   14:	00 60       	ori	r16, 0x00	; 0
@@ -113,7 +113,7 @@ Disassembly of section .text:
   5a:	f4 07       	cpc	r31, r20
   5c:	31 f7       	brne	.-52     	; 0x2a <__do_copy_data+0x8>
   5e:	03 d0       	rcall	.+6      	; 0x66 <_etext>
-  60:	b0 c0       	rjmp	.+352    	; 0x1c2 <exit>
+  60:	b3 c0       	rjmp	.+358    	; 0x1c8 <exit>
 
 00000062 <_exit>:
   62:	f8 94       	cli
@@ -123,116 +123,116 @@ Disassembly of section .text:
 
 Disassembly of section .text:
 
-000001d0 <__bad_interrupt>:
- 1d0:	17 cf       	rjmp	.-466    	; 0x0 <__TEXT_REGION_ORIGIN__>
+000001d6 <__bad_interrupt>:
+ 1d6:	14 cf       	rjmp	.-472    	; 0x0 <__TEXT_REGION_ORIGIN__>
 
 Disassembly of section .text.__vector_2:
 
-0000013c <__vector_2>:
+00000142 <__vector_2>:
 unsigned char	restart = 0;	//Флаг перезагрузки по выключению предохранителя
 
 void start_blink(void);
 
 ISR(PCINT0_vect)
 {
- 13c:	1f 92       	push	r1
- 13e:	0f 92       	push	r0
- 140:	0f b6       	in	r0, 0x3f	; 63
- 142:	0f 92       	push	r0
- 144:	11 24       	eor	r1, r1
- 146:	8f 93       	push	r24
+ 142:	1f 92       	push	r1
+ 144:	0f 92       	push	r0
+ 146:	0f b6       	in	r0, 0x3f	; 63
+ 148:	0f 92       	push	r0
+ 14a:	11 24       	eor	r1, r1
+ 14c:	8f 93       	push	r24
 	if (!(PINB & (1<<BTNPIN)))	//Если нажата кнопка диагностики
- 148:	b1 99       	sbic	0x16, 1	; 22
- 14a:	0f c0       	rjmp	.+30     	; 0x16a <__vector_2+0x2e>
+ 14e:	b1 99       	sbic	0x16, 1	; 22
+ 150:	0f c0       	rjmp	.+30     	; 0x170 <__vector_2+0x2e>
 	{
-		status_blink = 1;		//Выставляю флад диагностики
- 14c:	81 e0       	ldi	r24, 0x01	; 1
- 14e:	80 93 63 00 	sts	0x0063, r24	; 0x800063 <status_blink>
+		status_blink = 1;		//Выставляю флаг диагностики
+ 152:	81 e0       	ldi	r24, 0x01	; 1
+ 154:	80 93 63 00 	sts	0x0063, r24	; 0x800063 <status_blink>
 		counter = 0;			//Сбрасываю счётчик времени
- 152:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
- 156:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 158:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+ 15c:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__DATA_REGION_ORIGIN__>
 		PORTB|=(1<<TESTPIN)|(1<<OUTPIN);	//Зажигаю светодиод на панели
- 15a:	88 b3       	in	r24, 0x18	; 24
- 15c:	89 60       	ori	r24, 0x09	; 9
- 15e:	88 bb       	out	0x18, r24	; 24
+ 160:	88 b3       	in	r24, 0x18	; 24
+ 162:	89 60       	ori	r24, 0x09	; 9
+ 164:	88 bb       	out	0x18, r24	; 24
 		while(!(PINB & (1<<BTNPIN)));		//Жду, пока нажата кнопка
- 160:	b1 9b       	sbis	0x16, 1	; 22
- 162:	fe cf       	rjmp	.-4      	; 0x160 <__vector_2+0x24>
+ 166:	b1 9b       	sbis	0x16, 1	; 22
+ 168:	fe cf       	rjmp	.-4      	; 0x166 <__vector_2+0x24>
 		PORTB&=~((1<<OUTPIN)|(1<<TESTPIN));	//Выключаю светодиод
- 164:	88 b3       	in	r24, 0x18	; 24
- 166:	86 7f       	andi	r24, 0xF6	; 246
- 168:	88 bb       	out	0x18, r24	; 24
+ 16a:	88 b3       	in	r24, 0x18	; 24
+ 16c:	86 7f       	andi	r24, 0xF6	; 246
+ 16e:	88 bb       	out	0x18, r24	; 24
 	}
-	if (!(PINB & (1<<FUSEPIN)))				//Если предохранитель выдернули
- 16a:	b4 99       	sbic	0x16, 4	; 22
- 16c:	0b c0       	rjmp	.+22     	; 0x184 <__vector_2+0x48>
+	if ((PINB & (1<<FUSEPIN)))				//Если предохранитель выдернули
+ 170:	b4 9b       	sbis	0x16, 4	; 22
+ 172:	0b c0       	rjmp	.+22     	; 0x18a <__vector_2+0x48>
 	{
 		PORTB|=(1<<TESTPIN)|(1<<OUTPIN);	//Зажигаю светодиод
- 16e:	88 b3       	in	r24, 0x18	; 24
- 170:	89 60       	ori	r24, 0x09	; 9
- 172:	88 bb       	out	0x18, r24	; 24
-		while (!(PINB & (1<<FUSEPIN)));		//жду, пока не вставят предохранитель
- 174:	b4 9b       	sbis	0x16, 4	; 22
- 176:	fe cf       	rjmp	.-4      	; 0x174 <__vector_2+0x38>
+ 174:	88 b3       	in	r24, 0x18	; 24
+ 176:	89 60       	ori	r24, 0x09	; 9
+ 178:	88 bb       	out	0x18, r24	; 24
+		while ((PINB & (1<<FUSEPIN)));		//жду, пока не вставят предохранитель
+ 17a:	b4 99       	sbic	0x16, 4	; 22
+ 17c:	fe cf       	rjmp	.-4      	; 0x17a <__vector_2+0x38>
 		PORTB&=~((1<<OUTPIN)|(1<<TESTPIN));	//Выключаю светодиод
- 178:	88 b3       	in	r24, 0x18	; 24
- 17a:	86 7f       	andi	r24, 0xF6	; 246
- 17c:	88 bb       	out	0x18, r24	; 24
+ 17e:	88 b3       	in	r24, 0x18	; 24
+ 180:	86 7f       	andi	r24, 0xF6	; 246
+ 182:	88 bb       	out	0x18, r24	; 24
 		restart = 1;						//Поднимаю флаг перезагрузки
- 17e:	81 e0       	ldi	r24, 0x01	; 1
- 180:	80 93 62 00 	sts	0x0062, r24	; 0x800062 <restart>
+ 184:	81 e0       	ldi	r24, 0x01	; 1
+ 186:	80 93 62 00 	sts	0x0062, r24	; 0x800062 <restart>
 	}
 		
 }
- 184:	8f 91       	pop	r24
- 186:	0f 90       	pop	r0
- 188:	0f be       	out	0x3f, r0	; 63
- 18a:	0f 90       	pop	r0
- 18c:	1f 90       	pop	r1
- 18e:	18 95       	reti
+ 18a:	8f 91       	pop	r24
+ 18c:	0f 90       	pop	r0
+ 18e:	0f be       	out	0x3f, r0	; 63
+ 190:	0f 90       	pop	r0
+ 192:	1f 90       	pop	r1
+ 194:	18 95       	reti
 
 Disassembly of section .text.start_blink:
 
-00000190 <start_blink>:
+00000196 <start_blink>:
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
- 190:	2f eb       	ldi	r18, 0xBF	; 191
- 192:	84 ed       	ldi	r24, 0xD4	; 212
- 194:	91 e0       	ldi	r25, 0x01	; 1
- 196:	21 50       	subi	r18, 0x01	; 1
- 198:	80 40       	sbci	r24, 0x00	; 0
- 19a:	90 40       	sbci	r25, 0x00	; 0
- 19c:	e1 f7       	brne	.-8      	; 0x196 <start_blink+0x6>
- 19e:	00 c0       	rjmp	.+0      	; 0x1a0 <start_blink+0x10>
- 1a0:	00 00       	nop
+ 196:	2f eb       	ldi	r18, 0xBF	; 191
+ 198:	84 ed       	ldi	r24, 0xD4	; 212
+ 19a:	91 e0       	ldi	r25, 0x01	; 1
+ 19c:	21 50       	subi	r18, 0x01	; 1
+ 19e:	80 40       	sbci	r24, 0x00	; 0
+ 1a0:	90 40       	sbci	r25, 0x00	; 0
+ 1a2:	e1 f7       	brne	.-8      	; 0x19c <start_blink+0x6>
+ 1a4:	00 c0       	rjmp	.+0      	; 0x1a6 <start_blink+0x10>
+ 1a6:	00 00       	nop
 }
 
 void start_blink(void)
 {
 	_delay_ms(500);
 	PORTB|=(1<<OUTPIN);
- 1a2:	88 b3       	in	r24, 0x18	; 24
- 1a4:	81 60       	ori	r24, 0x01	; 1
- 1a6:	88 bb       	out	0x18, r24	; 24
- 1a8:	2f e3       	ldi	r18, 0x3F	; 63
- 1aa:	8e e7       	ldi	r24, 0x7E	; 126
- 1ac:	95 e0       	ldi	r25, 0x05	; 5
- 1ae:	21 50       	subi	r18, 0x01	; 1
- 1b0:	80 40       	sbci	r24, 0x00	; 0
- 1b2:	90 40       	sbci	r25, 0x00	; 0
- 1b4:	e1 f7       	brne	.-8      	; 0x1ae <start_blink+0x1e>
- 1b6:	00 c0       	rjmp	.+0      	; 0x1b8 <start_blink+0x28>
- 1b8:	00 00       	nop
+ 1a8:	88 b3       	in	r24, 0x18	; 24
+ 1aa:	81 60       	ori	r24, 0x01	; 1
+ 1ac:	88 bb       	out	0x18, r24	; 24
+ 1ae:	2f e3       	ldi	r18, 0x3F	; 63
+ 1b0:	8e e7       	ldi	r24, 0x7E	; 126
+ 1b2:	95 e0       	ldi	r25, 0x05	; 5
+ 1b4:	21 50       	subi	r18, 0x01	; 1
+ 1b6:	80 40       	sbci	r24, 0x00	; 0
+ 1b8:	90 40       	sbci	r25, 0x00	; 0
+ 1ba:	e1 f7       	brne	.-8      	; 0x1b4 <start_blink+0x1e>
+ 1bc:	00 c0       	rjmp	.+0      	; 0x1be <start_blink+0x28>
+ 1be:	00 00       	nop
 	_delay_ms(1500);
 	PORTB&=~(1<<OUTPIN);
- 1ba:	88 b3       	in	r24, 0x18	; 24
- 1bc:	8e 7f       	andi	r24, 0xFE	; 254
- 1be:	88 bb       	out	0x18, r24	; 24
- 1c0:	08 95       	ret
+ 1c0:	88 b3       	in	r24, 0x18	; 24
+ 1c2:	8e 7f       	andi	r24, 0xFE	; 254
+ 1c4:	88 bb       	out	0x18, r24	; 24
+ 1c6:	08 95       	ret
 
 Disassembly of section .text.main:
 
@@ -246,160 +246,164 @@ int main(void)
   66:	87 b3       	in	r24, 0x17	; 23
   68:	89 60       	ori	r24, 0x09	; 9
   6a:	87 bb       	out	0x17, r24	; 23
+	PORTB |=(1<<FUSEPIN);
+  6c:	88 b3       	in	r24, 0x18	; 24
+  6e:	80 61       	ori	r24, 0x10	; 16
+  70:	88 bb       	out	0x18, r24	; 24
 	PCMSK |= (1 << BTNPIN) | (1 << FUSEPIN);
-  6c:	85 b3       	in	r24, 0x15	; 21
-  6e:	82 61       	ori	r24, 0x12	; 18
-  70:	85 bb       	out	0x15, r24	; 21
+  72:	85 b3       	in	r24, 0x15	; 21
+  74:	82 61       	ori	r24, 0x12	; 18
+  76:	85 bb       	out	0x15, r24	; 21
 	GIMSK |= (1 << PCIE);
-  72:	8b b7       	in	r24, 0x3b	; 59
-  74:	80 62       	ori	r24, 0x20	; 32
-  76:	8b bf       	out	0x3b, r24	; 59
+  78:	8b b7       	in	r24, 0x3b	; 59
+  7a:	80 62       	ori	r24, 0x20	; 32
+  7c:	8b bf       	out	0x3b, r24	; 59
 	sei();
-  78:	78 94       	sei
+  7e:	78 94       	sei
 	
-	if (!(PINB & (1<<FUSEPIN)))	
-  7a:	b4 99       	sbic	0x16, 4	; 22
-  7c:	08 c0       	rjmp	.+16     	; 0x8e <main+0x28>
+	if ((PINB & (1<<FUSEPIN)))	
+  80:	b4 9b       	sbis	0x16, 4	; 22
+  82:	08 c0       	rjmp	.+16     	; 0x94 <main+0x2e>
 	{
 		PORTB|=(1<<TESTPIN)|(1<<OUTPIN);	//Зажигаю светодиод
-  7e:	88 b3       	in	r24, 0x18	; 24
-  80:	89 60       	ori	r24, 0x09	; 9
-  82:	88 bb       	out	0x18, r24	; 24
-		while (!(PINB & (1<<FUSEPIN)));		//жду, пока не вставят предохранитель
-  84:	b4 9b       	sbis	0x16, 4	; 22
-  86:	fe cf       	rjmp	.-4      	; 0x84 <main+0x1e>
+  84:	88 b3       	in	r24, 0x18	; 24
+  86:	89 60       	ori	r24, 0x09	; 9
+  88:	88 bb       	out	0x18, r24	; 24
+		while ((PINB & (1<<FUSEPIN)));		//жду, пока не вставят предохранитель
+  8a:	b4 99       	sbic	0x16, 4	; 22
+  8c:	fe cf       	rjmp	.-4      	; 0x8a <main+0x24>
 		PORTB&=~((1<<OUTPIN)|(1<<TESTPIN));
-  88:	88 b3       	in	r24, 0x18	; 24
-  8a:	86 7f       	andi	r24, 0xF6	; 246
-  8c:	88 bb       	out	0x18, r24	; 24
+  8e:	88 b3       	in	r24, 0x18	; 24
+  90:	86 7f       	andi	r24, 0xF6	; 246
+  92:	88 bb       	out	0x18, r24	; 24
 	}
 	start_blink();
-  8e:	80 d0       	rcall	.+256    	; 0x190 <start_blink>
+  94:	80 d0       	rcall	.+256    	; 0x196 <start_blink>
 	
 	}
     while(1)
     {
         if (status_blink == 1)
-  90:	80 91 63 00 	lds	r24, 0x0063	; 0x800063 <status_blink>
-  94:	81 30       	cpi	r24, 0x01	; 1
-  96:	09 f0       	breq	.+2      	; 0x9a <main+0x34>
-  98:	42 c0       	rjmp	.+132    	; 0x11e <__stack+0x7f>
-  9a:	87 eb       	ldi	r24, 0xB7	; 183
-  9c:	9b e0       	ldi	r25, 0x0B	; 11
-  9e:	01 97       	sbiw	r24, 0x01	; 1
-  a0:	f1 f7       	brne	.-4      	; 0x9e <main+0x38>
-  a2:	00 c0       	rjmp	.+0      	; 0xa4 <__stack+0x5>
-  a4:	00 00       	nop
+  96:	80 91 63 00 	lds	r24, 0x0063	; 0x800063 <status_blink>
+  9a:	81 30       	cpi	r24, 0x01	; 1
+  9c:	09 f0       	breq	.+2      	; 0xa0 <__stack+0x1>
+  9e:	42 c0       	rjmp	.+132    	; 0x124 <__stack+0x85>
+  a0:	87 eb       	ldi	r24, 0xB7	; 183
+  a2:	9b e0       	ldi	r25, 0x0B	; 11
+  a4:	01 97       	sbiw	r24, 0x01	; 1
+  a6:	f1 f7       	brne	.-4      	; 0xa4 <__stack+0x5>
+  a8:	00 c0       	rjmp	.+0      	; 0xaa <__stack+0xb>
+  aa:	00 00       	nop
         {
 			_delay_ms(10);
 			counter++;
-  a6:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
-  aa:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
-  ae:	01 96       	adiw	r24, 0x01	; 1
-  b0:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
-  b4:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+  ac:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+  b0:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+  b4:	01 96       	adiw	r24, 0x01	; 1
+  b6:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+  ba:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
 			if (counter == 150 || counter == 350 || counter == 850 || counter == 1050)
-  b8:	86 39       	cpi	r24, 0x96	; 150
-  ba:	91 05       	cpc	r25, r1
-  bc:	59 f0       	breq	.+22     	; 0xd4 <__stack+0x35>
-  be:	8e 35       	cpi	r24, 0x5E	; 94
-  c0:	21 e0       	ldi	r18, 0x01	; 1
-  c2:	92 07       	cpc	r25, r18
-  c4:	39 f0       	breq	.+14     	; 0xd4 <__stack+0x35>
-  c6:	82 35       	cpi	r24, 0x52	; 82
-  c8:	23 e0       	ldi	r18, 0x03	; 3
-  ca:	92 07       	cpc	r25, r18
-  cc:	19 f0       	breq	.+6      	; 0xd4 <__stack+0x35>
-  ce:	8a 31       	cpi	r24, 0x1A	; 26
-  d0:	94 40       	sbci	r25, 0x04	; 4
-  d2:	19 f4       	brne	.+6      	; 0xda <__stack+0x3b>
+  be:	86 39       	cpi	r24, 0x96	; 150
+  c0:	91 05       	cpc	r25, r1
+  c2:	59 f0       	breq	.+22     	; 0xda <__stack+0x3b>
+  c4:	8e 35       	cpi	r24, 0x5E	; 94
+  c6:	21 e0       	ldi	r18, 0x01	; 1
+  c8:	92 07       	cpc	r25, r18
+  ca:	39 f0       	breq	.+14     	; 0xda <__stack+0x3b>
+  cc:	82 35       	cpi	r24, 0x52	; 82
+  ce:	23 e0       	ldi	r18, 0x03	; 3
+  d0:	92 07       	cpc	r25, r18
+  d2:	19 f0       	breq	.+6      	; 0xda <__stack+0x3b>
+  d4:	8a 31       	cpi	r24, 0x1A	; 26
+  d6:	94 40       	sbci	r25, 0x04	; 4
+  d8:	19 f4       	brne	.+6      	; 0xe0 <__stack+0x41>
 			{
 				PORTB |= (1<<OUTPIN)|(1<<TESTPIN);
-  d4:	88 b3       	in	r24, 0x18	; 24
-  d6:	89 60       	ori	r24, 0x09	; 9
-  d8:	88 bb       	out	0x18, r24	; 24
+  da:	88 b3       	in	r24, 0x18	; 24
+  dc:	89 60       	ori	r24, 0x09	; 9
+  de:	88 bb       	out	0x18, r24	; 24
 			}
 			if (counter == 200 || counter == 400 || counter == 900 || counter == 1100)
-  da:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
-  de:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
-  e2:	88 3c       	cpi	r24, 0xC8	; 200
-  e4:	91 05       	cpc	r25, r1
-  e6:	59 f0       	breq	.+22     	; 0xfe <__stack+0x5f>
-  e8:	80 39       	cpi	r24, 0x90	; 144
-  ea:	21 e0       	ldi	r18, 0x01	; 1
-  ec:	92 07       	cpc	r25, r18
-  ee:	39 f0       	breq	.+14     	; 0xfe <__stack+0x5f>
-  f0:	84 38       	cpi	r24, 0x84	; 132
-  f2:	23 e0       	ldi	r18, 0x03	; 3
-  f4:	92 07       	cpc	r25, r18
-  f6:	19 f0       	breq	.+6      	; 0xfe <__stack+0x5f>
-  f8:	8c 34       	cpi	r24, 0x4C	; 76
-  fa:	94 40       	sbci	r25, 0x04	; 4
-  fc:	19 f4       	brne	.+6      	; 0x104 <__stack+0x65>
+  e0:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+  e4:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+  e8:	88 3c       	cpi	r24, 0xC8	; 200
+  ea:	91 05       	cpc	r25, r1
+  ec:	59 f0       	breq	.+22     	; 0x104 <__stack+0x65>
+  ee:	80 39       	cpi	r24, 0x90	; 144
+  f0:	21 e0       	ldi	r18, 0x01	; 1
+  f2:	92 07       	cpc	r25, r18
+  f4:	39 f0       	breq	.+14     	; 0x104 <__stack+0x65>
+  f6:	84 38       	cpi	r24, 0x84	; 132
+  f8:	23 e0       	ldi	r18, 0x03	; 3
+  fa:	92 07       	cpc	r25, r18
+  fc:	19 f0       	breq	.+6      	; 0x104 <__stack+0x65>
+  fe:	8c 34       	cpi	r24, 0x4C	; 76
+ 100:	94 40       	sbci	r25, 0x04	; 4
+ 102:	19 f4       	brne	.+6      	; 0x10a <__stack+0x6b>
 			{
 				PORTB&=~((1<<OUTPIN)|(1<<TESTPIN));
-  fe:	88 b3       	in	r24, 0x18	; 24
- 100:	86 7f       	andi	r24, 0xF6	; 246
- 102:	88 bb       	out	0x18, r24	; 24
+ 104:	88 b3       	in	r24, 0x18	; 24
+ 106:	86 7f       	andi	r24, 0xF6	; 246
+ 108:	88 bb       	out	0x18, r24	; 24
 			}
 			if (counter == 1100)
- 104:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
- 108:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
- 10c:	8c 34       	cpi	r24, 0x4C	; 76
- 10e:	94 40       	sbci	r25, 0x04	; 4
- 110:	31 f4       	brne	.+12     	; 0x11e <__stack+0x7f>
+ 10a:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 10e:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+ 112:	8c 34       	cpi	r24, 0x4C	; 76
+ 114:	94 40       	sbci	r25, 0x04	; 4
+ 116:	31 f4       	brne	.+12     	; 0x124 <__stack+0x85>
 			{
 				status_blink = 0;
- 112:	10 92 63 00 	sts	0x0063, r1	; 0x800063 <status_blink>
+ 118:	10 92 63 00 	sts	0x0063, r1	; 0x800063 <status_blink>
 				counter = 0;
- 116:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
- 11a:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 11c:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+ 120:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__DATA_REGION_ORIGIN__>
 			}
         }
 		if (restart == 1)
- 11e:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <restart>
- 122:	81 30       	cpi	r24, 0x01	; 1
- 124:	09 f0       	breq	.+2      	; 0x128 <__stack+0x89>
- 126:	b4 cf       	rjmp	.-152    	; 0x90 <main+0x2a>
+ 124:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <restart>
+ 128:	81 30       	cpi	r24, 0x01	; 1
+ 12a:	09 f0       	breq	.+2      	; 0x12e <__stack+0x8f>
+ 12c:	b4 cf       	rjmp	.-152    	; 0x96 <main+0x30>
 		{
 			status_blink = 0;
- 128:	10 92 63 00 	sts	0x0063, r1	; 0x800063 <status_blink>
+ 12e:	10 92 63 00 	sts	0x0063, r1	; 0x800063 <status_blink>
 			counter = 0;
- 12c:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
- 130:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 132:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+ 136:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__DATA_REGION_ORIGIN__>
 			restart = 0;
- 134:	10 92 62 00 	sts	0x0062, r1	; 0x800062 <restart>
+ 13a:	10 92 62 00 	sts	0x0062, r1	; 0x800062 <restart>
 			start_blink();
- 138:	2b d0       	rcall	.+86     	; 0x190 <start_blink>
- 13a:	aa cf       	rjmp	.-172    	; 0x90 <main+0x2a>
+ 13e:	2b d0       	rcall	.+86     	; 0x196 <start_blink>
+ 140:	aa cf       	rjmp	.-172    	; 0x96 <main+0x30>
 
 Disassembly of section .text.__dummy_fini:
 
-000001d2 <_fini>:
- 1d2:	08 95       	ret
+000001d8 <_fini>:
+ 1d8:	08 95       	ret
 
 Disassembly of section .text.__dummy_funcs_on_exit:
 
-000001d4 <__funcs_on_exit>:
- 1d4:	08 95       	ret
+000001da <__funcs_on_exit>:
+ 1da:	08 95       	ret
 
 Disassembly of section .text.__dummy_simulator_exit:
 
-000001d6 <__simulator_exit>:
- 1d6:	08 95       	ret
+000001dc <__simulator_exit>:
+ 1dc:	08 95       	ret
 
 Disassembly of section .text.exit:
 
-000001c2 <exit>:
- 1c2:	ec 01       	movw	r28, r24
- 1c4:	07 d0       	rcall	.+14     	; 0x1d4 <__funcs_on_exit>
- 1c6:	05 d0       	rcall	.+10     	; 0x1d2 <_fini>
- 1c8:	ce 01       	movw	r24, r28
- 1ca:	05 d0       	rcall	.+10     	; 0x1d6 <__simulator_exit>
- 1cc:	ce 01       	movw	r24, r28
- 1ce:	04 d0       	rcall	.+8      	; 0x1d8 <_Exit>
+000001c8 <exit>:
+ 1c8:	ec 01       	movw	r28, r24
+ 1ca:	07 d0       	rcall	.+14     	; 0x1da <__funcs_on_exit>
+ 1cc:	05 d0       	rcall	.+10     	; 0x1d8 <_fini>
+ 1ce:	ce 01       	movw	r24, r28
+ 1d0:	05 d0       	rcall	.+10     	; 0x1dc <__simulator_exit>
+ 1d2:	ce 01       	movw	r24, r28
+ 1d4:	04 d0       	rcall	.+8      	; 0x1de <_Exit>
 
 Disassembly of section .text._Exit:
 
-000001d8 <_Exit>:
- 1d8:	44 df       	rcall	.-376    	; 0x62 <_exit>
+000001de <_Exit>:
+ 1de:	41 df       	rcall	.-382    	; 0x62 <_exit>
